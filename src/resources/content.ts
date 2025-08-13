@@ -93,7 +93,7 @@ export const person = {
   name: "Ashish Kumar Singh",
   role: "Freelancer | Tech Enthusiast | Educational Leader",
   avatar: "/avatar.jpg",
-  location: "New Delhi, India",
+  location: "Asia/Kolkata",
   email: "ashish.jayshreeran@gmail.com",
   languages: ["Hindi (C1)", "English (C1)", "French (A2)"]
 } as const;
