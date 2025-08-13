@@ -71,7 +71,8 @@ export const about = {
   },
 
   tableOfContent: {
-    display: true
+    display: true,
+    subItems: true
   },
 
   avatar: {
@@ -120,7 +121,7 @@ export const languages = [
 export const person = {
   name: "Ashish Kumar Singh",
   role: "Freelancer | Tech Enthusiast | Educational Leader",
-  avatar: "/avatar.jpg", // Replace with your actual avatar path in public/ folder
+  avatar: "/avatar.jpg", // Place your avatar image in public/
   location: "New Delhi, India",
   languages: ["Hindi (C1)", "English (C1)", "French (A2)"]
 } as const;
@@ -132,3 +133,13 @@ export const social = [
     icon: "github"
   },
   {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/",
+    icon: "linkedin"
+  },
+  {
+    name: "Email",
+    link: "mailto:ashish.jayshreeran@gmail.com",
+    icon: "mail"
+  }
+] as const;
