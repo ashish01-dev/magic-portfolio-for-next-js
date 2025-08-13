@@ -24,9 +24,15 @@ export const about = {
     experiences: [
       {
         company: "Heera Lal Public School, New Delhi",
+        timeframe: "Mar 2023 - May 2024",
         role: "Head of School",
-        period: "Mar 2023 - May 2024",
-        description: "Developed and diversified instruction for students of varying skill levels, coordinated outreach events with parents and community members, ensured smooth student transitions, and implemented fair protocols to handle disruptive behavior."
+        achievements: [
+          "Developed and diversified instruction for students of varying skill levels",
+          "Coordinated outreach events with parents and community members",
+          "Ensured smooth student transitions and mealtime coordination",
+          "Implemented fair protocols to handle disruptive behavior"
+        ],
+        images: [] // No images provided, keeping empty
       }
     ]
   },
@@ -34,14 +40,42 @@ export const about = {
   studies: {
     title: "Education",
     display: true,
-    experiences: [
+    institutions: [
       {
-        company: "Guru Gobind Singh Indraprastha University",
-        role: "B.Tech in Information Technology",
-        period: "Expected July 2029",
-        description: "Studying core IT subjects with a focus on software development, problem solving, and emerging technologies."
+        name: "Guru Gobind Singh Indraprastha University",
+        description: "B.Tech in Information Technology (Expected July 2029)"
       }
     ]
+  },
+
+  technical: {
+    title: "Technical Skills",
+    display: true,
+    skills: [
+      {
+        title: "Technology & Tools",
+        description: "Accreditation oversight, Windows troubleshooting, Android custom ROM knowledge, Linux proficiency",
+        images: []
+      },
+      {
+        title: "Creative Software",
+        description: "Adobe Photoshop, After Effects, Figma",
+        images: []
+      }
+    ]
+  },
+
+  calendar: {
+    display: false,
+    link: "" // No calendar link, can be added later
+  },
+
+  tableOfContent: {
+    display: true
+  },
+
+  avatar: {
+    display: true
   }
 } as const;
 
