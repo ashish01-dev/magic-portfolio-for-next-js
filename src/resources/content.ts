@@ -127,9 +127,12 @@ export const gallery = {
 // Blog
 export const blog = {
   title: "Blog",
+  label: "Blog", // ✅ added label for Header buttons
   description: "My articles and posts.",
   path: "/blog",
-  posts: [] as { title: string; date: string; summary: string; url: string }[],
+  posts: [
+    // your existing posts array
+  ]
 } as const;
 
 export const work = {
