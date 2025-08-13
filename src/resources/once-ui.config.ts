@@ -20,14 +20,22 @@ export const display = {
   showGallery: true
 } as const;
 
+export const fonts = {
+  heading: { variable: "font-heading-variable" },
+  body: { variable: "font-body-variable" },
+  label: { variable: "font-label-variable" },
+  code: { variable: "font-code-variable" }
+} as const;
+
 // --- Other placeholders ---
 export const mailchimp = {};
 export const routes = {};
 export const protectedRoutes = {};
 export const baseURL = "https://yourwebsite.com";
-export const fonts = {};
 export const style = {};
 export const schema = {};
 export const sameAs = [];
 export const effects = {};
 export const dataStyle = {};
+
+
