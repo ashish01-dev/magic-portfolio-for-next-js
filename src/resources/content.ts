@@ -134,7 +134,8 @@ export const blog = {
 
 export const work = {
   title: "Work",
-  path: "/work", // ✅ required for route generation
+  label: "Work", // ✅ added label for Header buttons
+  path: "/work",
   description: "My professional projects and achievements",
 } as const;
 
