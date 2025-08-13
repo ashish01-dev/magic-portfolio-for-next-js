@@ -116,6 +116,14 @@ export const home = {
   subline: "Your subline here",
 } as const;
 
+// src/resources/content.ts
+export const gallery = {
+  title: "Gallery",
+  description: "A collection of my projects and works.",
+  path: "/gallery",
+  items: [] as { src: string; alt: string }[],
+} as const;
+
 // Blog
 export const blog = {
   title: "Blog",
