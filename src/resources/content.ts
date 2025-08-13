@@ -127,8 +127,9 @@ export const gallery = {
 // Blog
 export const blog = {
   title: "Blog",
-  description: "My latest blog posts",
+  description: "My articles and posts.",
   path: "/blog",
+  posts: [] as { title: string; date: string; summary: string; url: string }[],
 } as const;
 
 // Person
