@@ -28,6 +28,7 @@ export type Institution = {
 // about.ts
 export const about = {
   title: "About Me",
+  label: "About", // ✅ Added label for Header buttons
   description: `Dynamic educational leader with a proven track record as Principal of School,
 enhancing team skills and ensuring regulatory compliance. Adept at managing projects and
 addressing challenges collaboratively. Passionate about solving issues and viewing challenges
