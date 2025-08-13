@@ -1,3 +1,6 @@
+// once-ui.config.ts
+
+// --- Site config ---
 export const siteConfig = {
   name: "Ashish Kumar Singh",
   description: "Freelancer | Tech Enthusiast | Educational Leader",
@@ -7,60 +10,95 @@ export const siteConfig = {
     email: "ashish.jayshreeran@gmail.com",
     location: "New Delhi, India"
   },
-  theme: "dark",
+  // Theme options: 'light', 'dark', or 'system'
+  theme: "system",
+
+  // Use local content (no CMS)
   cms: false
 } as const;
 
-// --- Display toggles for sections ---
+// --- Display toggles for UI sections ---
 export const display = {
-  showHome: true,
-  showAbout: true,
-  showWork: true,
-  showBlog: true,
-  showGallery: true
+  location: true,
+  time: true,
+  themeSwitcher: true
 } as const;
 
 // Base URL for your site
 export const baseURL = "https://your-domain.com";
 
-// Fonts used in the project
+// --- Fonts ---
+import { Geist, Geist_Mono } from "next/font/google";
+
+const heading = Geist({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const body = Geist({
+  variable: "--font-body",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const label = Geist({
+  variable: "--font-label",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const code = Geist_Mono({
+  variable: "--font-code",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const fonts = {
-  heading: { variable: "font-heading-variable" },
-  body: { variable: "font-body-variable" },
-  label: { variable: "font-label-variable" },
-  code: { variable: "font-code-variable" }
-} as const;
+  heading,
+  body,
+  label,
+  code
+};
 
-// UI style configuration (colors from original template)
+// --- UI style configuration (from original template) ---
 export const style = {
-  brand: "cyan",                 // restored from template
-  accent: "red",                 // restored from template
-  neutral: "gray",               // restored from template
-  solid: "contrast",             // restored from template
-  solidStyle: "flat",            // restored from template
-  border: "playful",             // restored from template
-  surface: "translucent",        // restored from template
-  transition: "all",             // restored from template
-  scaling: "100"                 // restored from template
-} as const;
+  theme: "system", // dark | light | system
+  neutral: "gray", // sand | gray | slate | custom
+  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  solid: "contrast", // color | contrast
+  solidStyle: "flat", // flat | plastic
+  border: "playful", // rounded | playful | conservative
+  surface: "translucent", // filled | translucent
+  transition: "all", // all | micro | macro
+  scaling: "100" // 90 | 95 | 100 | 105 | 110
+};
 
-// Schema and SEO config
+// --- Schema and SEO config ---
 export const schema = {
-  type: "Person",
+  logo: "",
+  type: "Organization",
   name: "Ashish Kumar Singh",
-  url: baseURL
+  description: siteConfig.description,
+  email: "ashish.jayshreeran@gmail.com",
 } as const;
 
 // Social links for SEO
-export const sameAs = [
-  "https://github.com/ashish01-dev",
-  "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/",
-  "mailto:ashish.jayshreeran@gmail.com"
-] as const;
+export const sameAs = {
+  github: siteConfig.socialLinks.github,
+  linkedin: siteConfig.socialLinks.linkedin,
+  email: siteConfig.socialLinks.email
+} as const;
 
-// Background / UI effects (original template colors restored)
+// --- UI effects (original template values) ---
 export const effects = {
-  mask: { x: 0, y: 0, radius: 50, cursor: false },
+  mask: {
+    cursor: false,
+    x: 50,
+    y: 0,
+    radius: 100,
+  },
   gradient: {
     display: false,
     opacity: 100,
@@ -70,20 +108,20 @@ export const effects = {
     height: 50,
     tilt: 0,
     colorStart: "accent-background-strong",
-    colorEnd: "page-background"
+    colorEnd: "page-background",
   },
   dots: {
     display: true,
     opacity: 40,
     size: "2",
-    color: "brand-background-strong"
+    color: "brand-background-strong",
   },
   grid: {
     display: false,
     opacity: 100,
     color: "neutral-alpha-medium",
     width: "0.25rem",
-    height: "0.25rem"
+    height: "0.25rem",
   },
   lines: {
     display: false,
@@ -91,29 +129,35 @@ export const effects = {
     size: "16",
     thickness: 1,
     angle: 45,
-    color: "neutral-alpha-weak"
-  }
-} as const;
+    color: "neutral-alpha-weak",
+  },
+};
 
-// Additional data style options (original template)
+// Additional data style options
 export const dataStyle = {
-  variant: "gradient",
-  mode: "categorical",
-  height: 24,
-  axis: { stroke: "var(--neutral-alpha-weak)" },
-  tick: { fill: "var(--neutral-on-background-weak)", fontSize: 11, line: false }
-} as const;
+  variant: "gradient", // flat | gradient | outline
+  mode: "categorical", // categorical | divergent | sequential
+  height: 24, // default chart height
+  axis: {
+    stroke: "var(--neutral-alpha-weak)",
+  },
+  tick: {
+    fill: "var(--neutral-on-background-weak)",
+    fontSize: 11,
+    line: false
+  },
+};
 
-// Mailchimp placeholder (if you plan to use later)
+// --- Mailchimp placeholder ---
 export const mailchimp = {
-  apiKey: "",
-  listId: ""
+  action: "",
+  effects: effects
 } as const;
 
-// Protected routes (example)
+// --- Protected routes ---
 export const protectedRoutes: string[] = [];
 
-// Routes placeholder
+// --- Routes placeholder ---
 export const routes = {
   "/": true,
   "/about": true,
