@@ -132,6 +132,12 @@ export const blog = {
   posts: [] as { title: string; date: string; summary: string; url: string }[],
 } as const;
 
+export const work = {
+  title: "Work",
+  path: "/work", // ✅ required for route generation
+  description: "My professional projects and achievements",
+} as const;
+
 // Person
 export const person = {
   name: "Ashish Kumar Singh",
@@ -160,6 +166,3 @@ export const social = [
     icon: "mail"
   }
 ] as const;
-
-// Optional placeholders
-export const work = {} as const;
