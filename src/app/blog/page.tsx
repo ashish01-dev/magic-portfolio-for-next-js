@@ -1,16 +1,8 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
+// src/app/blog/page.tsx
+import React from "react";
+import { Column, Heading, Schema } from "@once-ui-system/core";
+import { blog, person, baseURL } from "@/resources";
 import { Posts } from "@/components/blog/Posts";
-import { baseURL, blog, person } from "@/resources"; // ✅ newsletter removed
-
-export async function generateMetadata() {
-  return Meta.generate({
-    title: blog.title,
-    description: blog.description,
-    baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(blog.title)}`,
-    path: blog.path,
-  });
-}
 
 export default function Blog() {
   return (
@@ -28,14 +20,10 @@ export default function Blog() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="display-strong-s">
-        {blog.title}
-      </Heading>
-      <Column fillWidth flex={1}>
-        <Posts range={[1, 1]} thumbnail direction="column" />
-        <Posts range={[2, 3]} thumbnail />
-        <Posts range={[4]} columns="2" />
-      </Column>
+      <Heading marginBottom="l" variant="display-strong-s">{blog.title}</Heading>
+      <Posts range={[1, 1]} thumbnail direction="column" />
+      <Posts range={[2, 3]} thumbnail />
+      <Posts range={[4]} columns="2" />
     </Column>
   );
 }
