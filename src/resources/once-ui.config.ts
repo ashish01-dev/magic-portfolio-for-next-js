@@ -31,17 +31,17 @@ export const fonts = {
   code: { variable: "font-code-variable" }
 } as const;
 
-// UI style configuration
+// UI style configuration (colors from original template)
 export const style = {
-  brand: "#4F46E5",
-  accent: "#F59E0B",
-  neutral: "#6B7280",
-  solid: "#111827",
-  solidStyle: "filled",
-  border: "rounded",
-  surface: "#F3F4F6",
-  transition: "0.3s",
-  scaling: 1
+  brand: "cyan",                 // restored from template
+  accent: "red",                 // restored from template
+  neutral: "gray",               // restored from template
+  solid: "contrast",             // restored from template
+  solidStyle: "flat",            // restored from template
+  border: "playful",             // restored from template
+  surface: "translucent",        // restored from template
+  transition: "all",             // restored from template
+  scaling: "100"                 // restored from template
 } as const;
 
 // Schema and SEO config
@@ -58,19 +58,50 @@ export const sameAs = [
   "mailto:ashish.jayshreeran@gmail.com"
 ] as const;
 
-// Background / UI effects
+// Background / UI effects (original template colors restored)
 export const effects = {
   mask: { x: 0, y: 0, radius: 50, cursor: false },
-  gradient: { display: true, opacity: 0.2, x: 0, y: 0, width: 100, height: 100, tilt: 0, colorStart: "#fff", colorEnd: "#000" },
-  dots: { display: false, opacity: 0.1, size: 1, color: "#000" },
-  grid: { display: false, opacity: 0.1, color: "#ccc", width: 100, height: 100 },
-  lines: { display: false, opacity: 0.1, size: 1, thickness: 1, angle: 0, color: "#000" }
+  gradient: {
+    display: false,
+    opacity: 100,
+    x: 50,
+    y: 60,
+    width: 100,
+    height: 50,
+    tilt: 0,
+    colorStart: "accent-background-strong",
+    colorEnd: "page-background"
+  },
+  dots: {
+    display: true,
+    opacity: 40,
+    size: "2",
+    color: "brand-background-strong"
+  },
+  grid: {
+    display: false,
+    opacity: 100,
+    color: "neutral-alpha-medium",
+    width: "0.25rem",
+    height: "0.25rem"
+  },
+  lines: {
+    display: false,
+    opacity: 100,
+    size: "16",
+    thickness: 1,
+    angle: 45,
+    color: "neutral-alpha-weak"
+  }
 } as const;
 
-// Additional data style options
+// Additional data style options (original template)
 export const dataStyle = {
-  variant: "default",
-  spacing: 8
+  variant: "gradient",
+  mode: "categorical",
+  height: 24,
+  axis: { stroke: "var(--neutral-alpha-weak)" },
+  tick: { fill: "var(--neutral-on-background-weak)", fontSize: 11, line: false }
 } as const;
 
 // Mailchimp placeholder (if you plan to use later)
