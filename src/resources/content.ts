@@ -1,9 +1,37 @@
+// types.ts (optional for clarity)
+export type Image = {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+};
+
+export type Experience = {
+  company: string;
+  timeframe: string;
+  role: string;
+  achievements: string[];
+  images: Image[];
+};
+
+export type Skill = {
+  title: string;
+  description: string;
+  images: Image[];
+};
+
+export type Institution = {
+  name: string;
+  description: string;
+};
+
+// about.ts
 export const about = {
   title: "About Me",
   description: `Dynamic educational leader with a proven track record as Principal of School,
-  enhancing team skills and ensuring regulatory compliance. Adept at managing projects and
-  addressing challenges collaboratively. Passionate about solving issues and viewing challenges
-  as real-life opportunities.`,
+enhancing team skills and ensuring regulatory compliance. Adept at managing projects and
+addressing challenges collaboratively. Passionate about solving issues and viewing challenges
+as real-life opportunities.`,
 
   path: "/about",
 
@@ -27,14 +55,14 @@ export const about = {
         timeframe: "Mar 2023 - May 2024",
         role: "Head of School",
         achievements: [
-          "Developed and diversified instruction for students of varying skill levels",
-          "Coordinated outreach events with parents and community members",
-          "Ensured smooth student transitions and mealtime coordination",
-          "Implemented fair protocols to handle disruptive behavior"
+          "Helped teachers develop and diversify instruction to better serve students at different skill levels and backgrounds",
+          "Coordinated outreach events to bring in parents, family members, and community at large to support students",
+          "Coordinated smooth mealtimes and student transitions",
+          "Backed up instructors in handling disruptive students and implemented fair protocols to resolve situations"
         ],
-        images: []
+        images: [] as Image[]
       }
-    ]
+    ] as Experience[]
   },
 
   studies: {
@@ -42,10 +70,10 @@ export const about = {
     display: true,
     institutions: [
       {
-        name: "Guru Gobind Singh Indraprastha University",
-        description: "B.Tech in Information Technology (Expected July 2029)"
+        name: "B.Tech in Information Technology",
+        description: "From GGSIPU New Delhi, Expected in July 2029"
       }
-    ]
+    ] as Institution[]
   },
 
   technical: {
@@ -54,15 +82,10 @@ export const about = {
     skills: [
       {
         title: "Technology & Tools",
-        description: "Accreditation oversight, Windows troubleshooting, Android custom ROM knowledge, Linux proficiency",
-        images: []
-      },
-      {
-        title: "Creative Software",
-        description: "Adobe Photoshop, After Effects, Figma",
-        images: []
+        description: "Accreditation oversight, Tech-related work, Regulatory compliance",
+        images: [] as Image[]
       }
-    ]
+    ] as Skill[]
   },
 
   calendar: {
@@ -81,35 +104,14 @@ export const about = {
 } as const;
 
 export const skills = [
-  "Accreditation Oversight",
-  "Tech-related Work",
-  "Regulatory Compliance",
-  "Windows Troubleshooting",
-  "Android Custom ROM Knowledge",
-  "Linux Proficiency",
-  "Adobe Photoshop, After Effects, Figma"
+  "Accreditation oversight",
+  "Tech-related work",
+  "Regulatory compliance"
 ] as const;
 
 export const projects = {
   title: "Achievements & Certifications",
-  items: [
-    {
-      name: "National Mathematics Olympiad",
-      description: "Gold Medalist at National Level (3 times)"
-    },
-    {
-      name: "National Science Olympiad",
-      description: "Silver Medalist at State Level (2 times)"
-    },
-    {
-      name: "BRICSMATH",
-      description: "Certificate of Winner at International Level"
-    },
-    {
-      name: "Kyokushin Karate",
-      description: "Senior Orange Belt (Affiliated to International Karate Federation World Kyokushin India)"
-    }
-  ]
+  items: []
 } as const;
 
 export const languages = [
@@ -121,7 +123,7 @@ export const languages = [
 export const person = {
   name: "Ashish Kumar Singh",
   role: "Freelancer | Tech Enthusiast | Educational Leader",
-  avatar: "/avatar.jpg", // Place your avatar image in public/
+  avatar: "/avatar.jpg", // Make sure this exists in public/
   location: "New Delhi, India",
   languages: ["Hindi (C1)", "English (C1)", "French (A2)"]
 } as const;
