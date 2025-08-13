@@ -3,6 +3,7 @@ export {
   person,
   social,
   home,
+  blog,
   about,
   work,
   gallery, // ✅ now gallery exists
