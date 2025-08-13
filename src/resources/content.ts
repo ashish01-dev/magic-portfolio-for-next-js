@@ -108,6 +108,7 @@ as real-life opportunities.`,
 // Home
 export const home = {
   title: "Home",
+  label: "Home", // ✅ Added label
   description: "Welcome to my portfolio",
   path: "/",
   image: "/images/home-og.jpg",
@@ -119,9 +120,12 @@ export const home = {
 // src/resources/content.ts
 export const gallery = {
   title: "Gallery",
+  label: "Gallery", // ✅ Added label for Header buttons
   description: "A collection of my projects and works.",
   path: "/gallery",
-  items: [] as { src: string; alt: string }[],
+  items: [
+    // your existing items here
+  ]
 } as const;
 
 // Blog
