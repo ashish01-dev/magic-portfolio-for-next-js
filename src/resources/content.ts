@@ -1,4 +1,3 @@
-// src/resources/content.tsx
 import { Logo } from "@once-ui-system/core";
 
 const person = {
@@ -10,30 +9,18 @@ const person = {
   role: "Software Engineer",
   avatar: "/images/avatar.jpg",
   email: "ashish.jayshreeram@gmail.com",
-  location: "Asia/Kolkata", // IANA time zone identifier
+  location: "Asia/Kolkata",
   languages: ["English", "Hindi"],
 };
 
 const social = [
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/ashish01-dev",
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/",
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-  },
+  { name: "GitHub", icon: "github", link: "https://github.com/ashish01-dev" },
+  { name: "LinkedIn", icon: "linkedin", link: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/" },
+  { name: "Email", icon: "email", link: `mailto:${person.email}` },
 ];
 
 const newsletter = {
-  display: false, // Change to true if you want to show newsletter section
+  display: false,
   title: "Subscribe to my Newsletter",
   description: "Get updates on my latest projects and blog posts.",
 };
@@ -44,31 +31,14 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between AI and code</>,
+  headline: "Building bridges between AI and code",
   featured: {
     display: true,
-    title: (
-      <>
-        Recent project: <strong className="ml-4">Html web</strong>
-      </>
-    ),
+    title: "Recent project: Html web",
     href: "/work/building-once-ui-a-customizable-design-system",
   },
-  subline: (
-    <>
-      I'm Ashish, a student currently persuing B.Tech{" "}
-      <Logo
-        icon="/trademarks/wordmark-dark.svg"
-        style={{
-          display: "inline-flex",
-          top: "0.25em",
-          marginLeft: "-0.25em",
-        }}
-      />
-      , where I craft intuitive <br /> user experiences. After hours, I build my
-      own projects.
-    </>
-  ),
+  subline:
+    "I'm Ashish, a student currently pursuing B.Tech, where I craft intuitive user experiences. After hours, I build my own projects.",
 };
 
 const about = {
@@ -76,23 +46,14 @@ const about = {
   label: "About",
   title: `About – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
-  tableOfContent: {
-    display: true,
-    subItems: false,
-  },
+  tableOfContent: { display: true, subItems: false },
   avatar: { display: true },
   calendar: { display: true, link: "https://cal.com" },
   intro: {
     display: true,
     title: "Introduction",
-    description: (
-      <>
-        Ashish is a Delhi-based design engineer with a passion for transforming
-        complex challenges into simple, elegant code solutions. His work spans
-        digital interfaces, interactive experiences, and the convergence of
-        design and technology.
-      </>
-    ),
+    description:
+      "Ashish is a Delhi-based design engineer with a passion for transforming complex challenges into simple, elegant code solutions. His work spans digital interfaces, interactive experiences, and the convergence of design and technology.",
   },
   work: {
     display: true,
@@ -103,14 +64,8 @@ const about = {
         timeframe: "2025 - Present",
         role: "Student",
         achievements: [
-          <>
-            Designed the UI/UX for the chromium platform, resulting in a fluid
-            user engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling coders to iterate 50% faster.
-          </>,
+          "Designed the UI/UX for the chromium platform, resulting in a fluid user engagement and 30% faster load times.",
+          "Spearheaded the integration of AI tools into design workflows, enabling coders to iterate 50% faster.",
         ],
         images: [
           {
@@ -126,14 +81,8 @@ const about = {
         timeframe: "2018 - 2022",
         role: "Lead Designer",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
-          </>,
+          "Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.",
+          "Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.",
         ],
         images: [],
       },
@@ -143,14 +92,8 @@ const about = {
     display: true,
     title: "Studies",
     institutions: [
-      {
-        name: "Guru Gobind Singh Indraprastha University",
-        description: <>Studied Information Technology.</>,
-      },
-      {
-        name: "Oracle",
-        description: <>Studied Generative AI and Servers Workload.</>,
-      },
+      { name: "Guru Gobind Singh Indraprastha University", description: "Studied Information Technology." },
+      { name: "Oracle", description: "Studied Generative AI and Servers Workload." },
     ],
   },
   technical: {
@@ -159,32 +102,17 @@ const about = {
     skills: [
       {
         title: "C#",
-        description: <>Able to medicore code in C# with good speed.</>,
+        description: "Able to medicore code in C# with good speed.",
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          { src: "/images/projects/project-01/cover-02.jpg", alt: "Project image", width: 16, height: 9 },
+          { src: "/images/projects/project-01/cover-03.jpg", alt: "Project image", width: 16, height: 9 },
         ],
       },
       {
         title: "Python (Learning)",
-        description: <>Improving my Python skills</>,
+        description: "Improving my Python skills",
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          { src: "/images/projects/project-01/cover-04.jpg", alt: "Project image", width: 16, height: 9 },
         ],
       },
     ],
