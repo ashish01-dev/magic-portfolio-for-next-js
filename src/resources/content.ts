@@ -42,12 +42,12 @@ const home = {
   headline: <>Building bridges between AI and code</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">HTML website</strong></>,
+    title: <>Recent project: <strong className="ml-4">Html web</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
     <>
-      I'm Ashish, a student currently persuing B.Tech IT (expected 2029) ,I craft intuitive
+      I'm Ashish, a student currently persuing B.Tech <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>,where i craft intuitive 
       <br /> user experiences After hours, I build my own projects.
     </>
   ),
