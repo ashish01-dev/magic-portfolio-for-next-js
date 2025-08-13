@@ -162,4 +162,3 @@ export const social = [
 
 // Optional placeholders
 export const work = {} as const;
-export const gallery = {} as const;
