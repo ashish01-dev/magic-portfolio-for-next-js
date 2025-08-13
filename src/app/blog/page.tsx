@@ -1,7 +1,6 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
-import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
-import { baseURL, blog, person } from "@/resources"; // ✅ removed newsletter
+import { baseURL, blog, person } from "@/resources"; // ✅ newsletter removed
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -37,7 +36,6 @@ export default function Blog() {
         <Posts range={[2, 3]} thumbnail />
         <Posts range={[4]} columns="2" />
       </Column>
-      {/* Removed newsletter display */}
     </Column>
   );
 }
