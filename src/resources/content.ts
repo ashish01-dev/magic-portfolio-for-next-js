@@ -5,7 +5,18 @@ export const about = {
   addressing challenges collaboratively. Passionate about solving issues and viewing challenges
   as real-life opportunities.`,
 
-  path: "/about", // Added path property
+  path: "/about",
+
+  intro: {
+    title: "Introduction",
+    display: true,
+    description: "I am Ashish Kumar Singh, a dedicated and passionate freelancer with expertise in technology, education, and leadership.",
+    items: [
+      "Freelancer & Tech Enthusiast",
+      "Experienced Educational Leader",
+      "Passionate about solving challenges"
+    ]
+  },
 
   work: {
     title: "Experience",
