@@ -1,34 +1,31 @@
-// once-ui.config.ts
+import { home } from "./content";
 
-// --- Site config ---
-export const siteConfig = {
-  name: "Ashish Kumar Singh",
-  description: "Freelancer | Tech Enthusiast | Educational Leader",
-  socialLinks: {
-    github: "https://github.com/ashish01-dev",
-    linkedin: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/",
-    email: "ashish.jayshreeran@gmail.com",
-    location: "Asia/Kolkata"
-  },
-  // Theme options: 'light', 'dark', or 'system'
-  theme: "system",
+// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
+const baseURL = "https://demo.magic-portfolio.com";
 
-  // Use local content (no CMS)
-  cms: false
-} as const;
+const routes = {
+  "/": true,
+  "/about": true,
+  "/work": true,
+  "/blog": true,
+  "/gallery": true,
+};
 
-// --- Display toggles for UI sections ---
-export const display = {
+const display = {
   location: true,
   time: true,
   themeSwitcher: true
-} as const;
+};
 
-// Base URL for your site
-export const baseURL = "https://your-domain.com";
+// Enable password protection on selected routes
+// Set password in the .env file, refer to .env.example
+const protectedRoutes = {
+  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+};
 
-// --- Fonts ---
-import { Geist, Geist_Mono } from "next/font/google";
+// Import and set font for each variant
+import { Geist } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 
 const heading = Geist({
   variable: "--font-heading",
@@ -54,15 +51,15 @@ const code = Geist_Mono({
   display: "swap",
 });
 
-export const fonts = {
-  heading,
-  body,
-  label,
-  code
+const fonts = {
+  heading: heading,
+  body: body,
+  label: label,
+  code: code,
 };
 
-// --- UI style configuration (from original template) ---
-export const style = {
+// default customization applied to the HTML in the main layout.tsx
+const style = {
   theme: "system", // dark | light | system
   neutral: "gray", // sand | gray | slate | custom
   brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
@@ -75,24 +72,21 @@ export const style = {
   scaling: "100" // 90 | 95 | 100 | 105 | 110
 };
 
-// --- Schema and SEO config ---
-export const schema = {
-  logo: "",
-  type: "Organization",
-  name: "Ashish Kumar Singh",
-  description: siteConfig.description,
-  email: "ashish.jayshreeran@gmail.com",
-} as const;
+const dataStyle = {
+  variant: "gradient", // flat | gradient | outline
+  mode: "categorical", // categorical | divergent | sequential
+  height: 24, // default chart height
+  axis: {
+    stroke: "var(--neutral-alpha-weak)",
+  },
+  tick: {
+    fill: "var(--neutral-on-background-weak)",
+    fontSize: 11,
+    line: false
+  },
+};
 
-// Social links for SEO
-export const sameAs = {
-  github: siteConfig.socialLinks.github,
-  linkedin: siteConfig.socialLinks.linkedin,
-  email: siteConfig.socialLinks.email
-} as const;
-
-// --- UI effects (original template values) ---
-export const effects = {
+const effects = {
   mask: {
     cursor: false,
     x: 50,
@@ -126,42 +120,71 @@ export const effects = {
   lines: {
     display: false,
     opacity: 100,
+    color: "neutral-alpha-weak",
     size: "16",
     thickness: 1,
     angle: 45,
-    color: "neutral-alpha-weak",
   },
 };
 
-// Additional data style options
-export const dataStyle = {
-  variant: "gradient", // flat | gradient | outline
-  mode: "categorical", // categorical | divergent | sequential
-  height: 24, // default chart height
-  axis: {
-    stroke: "var(--neutral-alpha-weak)",
-  },
-  tick: {
-    fill: "var(--neutral-on-background-weak)",
-    fontSize: 11,
-    line: false
-  },
+const mailchimp = {
+  action: "https://url/subscribe/post?parameters",
+  effects: {
+    mask: {
+      cursor: true,
+      x: 50,
+      y: 0,
+      radius: 100,
+    },
+    gradient: {
+      display: true,
+      opacity: 90,
+      x: 50,
+      y: 0,
+      width: 50,
+      height: 50,
+      tilt: 0,
+      colorStart: "accent-background-strong",
+      colorEnd: "static-transparent",
+    },
+    dots: {
+      display: true,
+      opacity: 20,
+      size: "2",
+      color: "brand-on-background-weak",
+    },
+    grid: {
+      display: false,
+      opacity: 100,
+      color: "neutral-alpha-medium",
+      width: "0.25rem",
+      height: "0.25rem",
+    },
+    lines: {
+      display: false,
+      opacity: 100,
+      color: "neutral-alpha-medium",
+      size: "16",
+      thickness: 1,
+      angle: 90,
+    },
+  }
 };
 
-// --- Mailchimp placeholder ---
-export const mailchimp = {
-  action: "",
-  effects: effects
-} as const;
-
-// --- Protected routes ---
-export const protectedRoutes: string[] = [];
-
-// --- Routes placeholder ---
-export const routes = {
-  "/": true,
-  "/about": true,
-  "/blog": true,
-  "/work": true,
-  "/gallery": true
+// default schema data
+const schema = {
+  logo: "",
+  type: "Organization",
+  name: "Github",
+  description: home.description,
+  email: "ashish.jayshreeram@gmail.com",
 };
+
+// social links
+const sameAs = {
+  threads: "https://www.threads.com/",
+  linkedin: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/",
+  discord: "https://discord.com/",
+};
+
+export { display, mailchimp, routes, protectedRoutes, baseURL, fonts, style, schema, sameAs, effects, dataStyle };
