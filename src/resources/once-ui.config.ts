@@ -8,6 +8,7 @@ export const siteConfig = {
     github: "https://github.com/ashish01-dev",
     linkedin: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/",
     email: "ashish.jayshreeran@gmail.com",
+    location: "Asia/Kolkata"
   },
   // Theme options: 'light', 'dark', or 'system'
   theme: "system",
