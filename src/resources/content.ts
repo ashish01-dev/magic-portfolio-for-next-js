@@ -1,4 +1,4 @@
-// types.ts (optional for clarity)
+// --- Types (optional for clarity) ---
 export type Image = {
   src: string;
   alt: string;
@@ -25,9 +25,7 @@ export type Institution = {
   description: string;
 };
 
-// -------------------- CONTENT --------------------
-
-// About
+// --- About Section ---
 export const about = {
   title: "About Me",
   label: "About",
@@ -36,7 +34,6 @@ enhancing team skills and ensuring regulatory compliance. Adept at managing proj
 addressing challenges collaboratively. Passionate about solving issues and viewing challenges
 as real-life opportunities.`,
   path: "/about",
-
   intro: {
     title: "Introduction",
     display: true,
@@ -47,7 +44,6 @@ as real-life opportunities.`,
       "Passionate about solving challenges"
     ]
   },
-
   work: {
     title: "Experience",
     display: true,
@@ -66,7 +62,6 @@ as real-life opportunities.`,
       }
     ] as Experience[]
   },
-
   studies: {
     title: "Education",
     display: true,
@@ -77,7 +72,6 @@ as real-life opportunities.`,
       }
     ] as Institution[]
   },
-
   technical: {
     title: "Technical Skills",
     display: true,
@@ -89,64 +83,12 @@ as real-life opportunities.`,
       }
     ] as Skill[]
   },
-
-  calendar: {
-    display: false,
-    link: ""
-  },
-
-  tableOfContent: {
-    display: true,
-    subItems: true
-  },
-
-  avatar: {
-    display: true
-  }
+  calendar: { display: false, link: "" },
+  tableOfContent: { display: true, subItems: true },
+  avatar: { display: true }
 } as const;
 
-// Home
-export const home = {
-  title: "Home",
-  label: "Home", // ✅ Added label
-  description: "Welcome to my portfolio",
-  path: "/",
-  image: "/images/home-og.jpg",
-  featured: { display: true, title: "Featured Project", href: "/projects" },
-  headline: "Your headline here",
-  subline: "Your subline here",
-} as const;
-
-// src/resources/content.ts
-export const gallery = {
-  title: "Gallery",
-  label: "Gallery", // ✅ Added label for Header buttons
-  description: "A collection of my projects and works.",
-  path: "/gallery",
-  items: [
-    // your existing items here
-  ]
-} as const;
-
-// Blog
-export const blog = {
-  title: "Blog",
-  label: "Blog", // ✅ added label for Header buttons
-  description: "My articles and posts.",
-  path: "/blog",
-  posts: [
-    // your existing posts array
-  ]
-} as const;
-
-export const work = {
-  title: "Work",
-  label: "Work", // ✅ added label for Header buttons
-  path: "/work",
-  description: "My professional projects and achievements",
-} as const;
-
-// Person
+// --- Person Info ---
 export const person = {
   name: "Ashish Kumar Singh",
   role: "Freelancer | Tech Enthusiast | Educational Leader",
@@ -156,21 +98,46 @@ export const person = {
   languages: ["Hindi (C1)", "English (C1)", "French (A2)"]
 } as const;
 
-// Social
+// --- Home Section ---
+export const home = {
+  title: "Home",
+  description: "Welcome to my portfolio",
+  path: "/",
+  image: "/images/home-og.jpg",
+  featured: { display: true, title: "Featured Project", href: "/projects" },
+  headline: "Your headline here",
+  subline: "Your subline here"
+} as const;
+
+// --- Social Links ---
 export const social = [
-  {
-    name: "GitHub",
-    link: "https://github.com/ashish01-dev",
-    icon: "github"
-  },
-  {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/",
-    icon: "linkedin"
-  },
-  {
-    name: "Email",
-    link: "mailto:ashish.jayshreeran@gmail.com",
-    icon: "mail"
-  }
+  { name: "GitHub", link: "https://github.com/ashish01-dev", icon: "github" },
+  { name: "LinkedIn", link: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/", icon: "linkedin" },
+  { name: "Email", link: "mailto:ashish.jayshreeran@gmail.com", icon: "mail" }
 ] as const;
+
+// --- Work Placeholder ---
+export const work = {
+  title: "Work",
+  label: "Work",
+  path: "/work",
+  description: "My professional projects and achievements"
+} as const;
+
+// --- Blog Placeholder ---
+export const blog = {
+  title: "Blog",
+  label: "Blog",
+  path: "/blog",
+  description: "My articles and posts.",
+  posts: [] as { title: string; date: string; summary: string; url: string }[]
+} as const;
+
+// --- Gallery Placeholder ---
+export const gallery = {
+  title: "Gallery",
+  label: "Gallery",
+  path: "/gallery",
+  description: "A collection of my projects and works.",
+  items: [] as { src: string; alt: string }[]
+} as const;
