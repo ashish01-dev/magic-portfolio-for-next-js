@@ -130,6 +130,15 @@ export const person = {
   languages: ["Hindi (C1)", "English (C1)", "French (A2)"]
 } as const;
 
+export const home = {
+  title: "Home",
+  description: "Welcome to my portfolio",
+  path: "/",
+  featured: { display: true, title: "Featured Project", href: "/projects" },
+  headline: "Your headline here",
+  subline: "Your subline here",
+} as const;
+
 export const social = [
   {
     name: "GitHub",
