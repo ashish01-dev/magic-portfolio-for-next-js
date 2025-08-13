@@ -1,143 +1,263 @@
-// --- Types (optional for clarity) ---
-export type Image = {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
+import { Logo } from "@once-ui-system/core";
+
+const person = {
+  firstName: "Ashish",
+  lastName: "Singh",
+  get name() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  role: "Software Engineer",
+  avatar: "/images/avatar.jpg",
+  email: "ashish.jayshreeram@gmail.com",
+  location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
-export type Experience = {
-  company: string;
-  timeframe: string;
-  role: string;
-  achievements: string[];
-  images: Image[];
+const newsletter = {
+  display: true,
+  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  description: (
+    <>
+      I occasionally write about design, technology, and share thoughts on the intersection of
+      creativity and engineering.
+    </>
+  ),
 };
 
-export type Skill = {
-  title: string;
-  description: string;
-  images: Image[];
-};
+const social = [
+  // Links are automatically displayed.
+  // Import new icons in /once-ui/icons.ts
+  {
+    name: "GitHub",
+    icon: "github",
+    link: "https://github.com/ashish01-dev",
+  },
+  {
+    name: "LinkedIn",
+    icon: "linkedin",
+    link: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/",
+  },
+  {
+    name: "Email",
+    icon: "email",
+    link: `mailto:${person.email}`,
+  },
+];
 
-export type Institution = {
-  name: string;
-  description: string;
-};
-
-// --- About Section ---
-export const about = {
-  title: "About Me",
-  label: "About",
-  description: `Dynamic educational leader with a proven track record as Principal of School,
-enhancing team skills and ensuring regulatory compliance. Adept at managing projects and
-addressing challenges collaboratively. Passionate about solving issues and viewing challenges
-as real-life opportunities.`,
-  path: "/about",
-  intro: {
-    title: "Introduction",
+const home = {
+  path: "/",
+  image: "/images/og/home.jpg",
+  label: "Home",
+  title: `${person.name}'s Portfolio`,
+  description: `Portfolio website showcasing my work as a ${person.role}`,
+  headline: <>Building bridges between AI and code</>,
+  featured: {
     display: true,
-    description: "I am Ashish Kumar Singh, a dedicated and passionate freelancer with expertise in technology, education, and leadership.",
-    items: [
-      "Freelancer & Tech Enthusiast",
-      "Experienced Educational Leader",
-      "Passionate about solving challenges"
-    ]
+    title: <>Recent project: <strong className="ml-4">HTML website</strong></>,
+    href: "/work/building-once-ui-a-customizable-design-system",
+  },
+  subline: (
+    <>
+      I'm Ashish, a student currently persuing B.Tech IT (expected 2029) ,I craft intuitive
+      <br /> user experiences After hours, I build my own projects.
+    </>
+  ),
+};
+
+const about = {
+  path: "/about",
+  label: "About",
+  title: `About – ${person.name}`,
+  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  tableOfContent: {
+    display: true,
+    subItems: false,
+  },
+  avatar: {
+    display: true,
+  },
+  calendar: {
+    display: true,
+    link: "https://cal.com",
+  },
+  intro: {
+    display: true,
+    title: "Introduction",
+    description: (
+      <>
+        Ashish is a Delhi-based design engineer with a passion for transforming complex challenges
+        into simple, elegant code solutions. His work spans digital interfaces, interactive
+        experiences, and the convergence of design and technology.
+      </>
+    ),
   },
   work: {
-    title: "Experience",
-    display: true,
+    display: true, // set to false to hide this section
+    title: "Student Experience",
     experiences: [
       {
-        company: "Heera Lal Public School, New Delhi",
-        timeframe: "Mar 2023 - May 2024",
-        role: "Head of School",
+        company: "GGSIPU",
+        timeframe: "2025 - Present",
+        role: "Student",
         achievements: [
-          "Helped teachers develop and diversify instruction to better serve students at different skill levels and backgrounds",
-          "Coordinated outreach events to bring in parents, family members, and community at large to support students",
-          "Coordinated smooth mealtimes and student transitions",
-          "Backed up instructors in handling disruptive students and implemented fair protocols to resolve situations"
+          <>
+            Designed the UI/UX for the chromium platform, resulting in a fluid user
+            engagement and 30% faster load times.
+          </>,
+          <>
+            Spearheaded the integration of AI tools into design workflows, enabling coders to
+            iterate 50% faster.
+          </>,
         ],
-        images: [] as Image[]
-      }
-    ] as Experience[]
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Once UI Project",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "NONE",
+        timeframe: "2018 - 2022",
+        role: "Lead Designer",
+        achievements: [
+          <>
+            Developed a design system that unified the brand across multiple platforms, improving
+            design consistency by 40%.
+          </>,
+          <>
+            Led a cross-functional team to launch a new product line, contributing to a 15% increase
+            in overall company revenue.
+          </>,
+        ],
+        images: [],
+      },
+    ],
   },
   studies: {
-    title: "Education",
-    display: true,
+    display: true, // set to false to hide this section
+    title: "Studies",
     institutions: [
       {
-        name: "B.Tech in Information Technology",
-        description: "From GGSIPU New Delhi, Expected in July 2029"
-      }
-    ] as Institution[]
+        name: "Guru Gobing Singh Indraprashtha University",
+        description: <>Studied Information Technology.</>,
+      },
+      {
+        name: "Oracle",
+        description: <>Studied Generative AI and Servers Workload.</>,
+      },
+    ],
   },
   technical: {
-    title: "Technical Skills",
-    display: true,
+    display: true, // set to false to hide this section
+    title: "Technical skills",
     skills: [
       {
-        title: "Technology & Tools",
-        description: "Accreditation oversight, Tech-related work, Regulatory compliance",
-        images: [] as Image[]
-      }
-    ] as Skill[]
+        title: "C#",
+        description: <>Able to medicore code in C# with with good speed.</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Python (Learning)",
+        description: <>Improving my Pyhton skills </>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-04.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+    ],
   },
-  calendar: { display: false, link: "" },
-  tableOfContent: { display: true, subItems: true },
-  avatar: { display: true }
-} as const;
+};
 
-// --- Person Info ---
-export const person = {
-  name: "Ashish Kumar Singh",
-  role: "Freelancer | Tech Enthusiast | Educational Leader",
-  avatar: "/avatar.jpg",
-  location: "Asia/Kolkata",
-  email: "ashish.jayshreeran@gmail.com",
-  languages: ["Hindi (C1)", "English (C1)", "French (A2)"]
-} as const;
-
-// --- Home Section ---
-export const home = {
-  title: "Home",
-  description: "Welcome to my portfolio",
-  path: "/",
-  image: "/images/home-og.jpg",
-  featured: { display: true, title: "Featured Project", href: "/projects" },
-  headline: "Your headline here",
-  subline: "Your subline here"
-} as const;
-
-// --- Social Links ---
-export const social = [
-  { name: "GitHub", link: "https://github.com/ashish01-dev", icon: "github" },
-  { name: "LinkedIn", link: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/", icon: "linkedin" },
-  { name: "Email", link: "mailto:ashish.jayshreeran@gmail.com", icon: "mail" }
-] as const;
-
-// --- Work Placeholder ---
-export const work = {
-  title: "Work",
-  label: "Work",
-  path: "/work",
-  description: "My professional projects and achievements"
-} as const;
-
-// --- Blog Placeholder ---
-export const blog = {
-  title: "Blog",
-  label: "Blog",
+const blog = {
   path: "/blog",
-  description: "My articles and posts.",
-  posts: [] as { title: string; date: string; summary: string; url: string }[]
-} as const;
+  label: "Blog",
+  title: "Work in Progress....",
+  description: `Read what ${person.name} has been up to recently`,
+  // Create new blog posts by adding a new .mdx file to app/blog/posts
+  // All posts will be listed on the /blog route
+};
 
-// --- Gallery Placeholder ---
-export const gallery = {
-  title: "Gallery",
-  label: "Gallery",
+const work = {
+  path: "/work",
+  label: "Work",
+  title: `Projects –To be Added Soon`,
+  description: `Design and dev projects by ${person.name}`,
+  // Create new project pages by adding a new .mdx file to app/blog/posts
+  // All projects will be listed on the /home and /work routes
+};
+
+const gallery = {
   path: "/gallery",
-  description: "A collection of my projects and works.",
-  items: [] as { src: string; alt: string }[]
-} as const;
+  label: "Gallery",
+  title: `Photo gallery – ${person.name}`,
+  description: `A photo collection by ${person.name}`,
+  // Images by https://lorant.one
+  // These are placeholder images, replace with your own
+  images: [
+    {
+      src: "/images/gallery/horizontal-1.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/horizontal-2.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/horizontal-3.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/horizontal-4.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-1.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/vertical-2.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/vertical-3.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/vertical-4.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+  ],
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery };
