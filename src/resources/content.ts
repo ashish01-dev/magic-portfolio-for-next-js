@@ -5,6 +5,8 @@ export const about = {
   addressing challenges collaboratively. Passionate about solving issues and viewing challenges
   as real-life opportunities.`,
 
+  path: "/about", // Added path property
+
   work: {
     title: "Experience",
     display: true,
