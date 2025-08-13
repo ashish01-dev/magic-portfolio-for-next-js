@@ -134,6 +134,7 @@ export const home = {
   title: "Home",
   description: "Welcome to my portfolio",
   path: "/",
+  image: "/images/home-og.jpg",
   featured: { display: true, title: "Featured Project", href: "/projects" },
   headline: "Your headline here",
   subline: "Your subline here",
