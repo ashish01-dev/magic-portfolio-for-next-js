@@ -7,9 +7,27 @@ export const siteConfig = {
     email: "ashish.jayshreeran@gmail.com",
     location: "New Delhi, India"
   },
-  // Theme options: 'light', 'dark', or 'system'
   theme: "dark",
-
-  // Ensure local content is used instead of CMS
   cms: false
 } as const;
+
+// --- Display toggles for sections ---
+export const display = {
+  showHome: true,
+  showAbout: true,
+  showWork: true,
+  showBlog: true,
+  showGallery: true
+} as const;
+
+// --- Other placeholders ---
+export const mailchimp = {};
+export const routes = {};
+export const protectedRoutes = {};
+export const baseURL = "https://yourwebsite.com";
+export const fonts = {};
+export const style = {};
+export const schema = {};
+export const sameAs = [];
+export const effects = {};
+export const dataStyle = {};
