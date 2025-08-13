@@ -1,14 +1,27 @@
 // src/resources/index.ts
-export {
-  person,
-  social,
-  home,
-  blog,
-  about,
-  work,
-  gallery, // ✅ now gallery exists
+
+// --- Export all content ---
+export { 
+  person, 
+  social, 
+  home, 
+  about, 
+  work, 
+  blog, 
+  gallery 
 } from "./content";
 
-export { display, mailchimp, routes, protectedRoutes, baseURL, fonts, style, schema, sameAs, effects, dataStyle } from "./once-ui.config";
-// --- Export content ---
-export { person, social, home, about, work, blog, gallery } from "./content";
+// --- Export all UI config / site settings ---
+export { 
+  display, 
+  mailchimp, 
+  routes, 
+  protectedRoutes, 
+  baseURL, 
+  fonts, 
+  style, 
+  schema, 
+  sameAs, 
+  effects, 
+  dataStyle 
+} from "./once-ui.config";
