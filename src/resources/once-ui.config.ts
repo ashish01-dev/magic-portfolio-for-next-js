@@ -182,9 +182,9 @@ const schema = {
 
 // social links
 const sameAs = {
-  threads: "https://www.threads.com
+  threads: "https://www.threads.com/",
   linkedin: "https://www.linkedin.com/in/ashish-kumar-singh-9002a437a/",
-  discord: "https://discord.com
+  discord: "https://discord.com/",
 };
 
 export { display, mailchimp, routes, protectedRoutes, baseURL, fonts, style, schema, sameAs, effects, dataStyle };
