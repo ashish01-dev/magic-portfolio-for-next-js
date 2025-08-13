@@ -32,7 +32,7 @@ export const about = {
           "Ensured smooth student transitions and mealtime coordination",
           "Implemented fair protocols to handle disruptive behavior"
         ],
-        images: [] // No images provided, keeping empty
+        images: []
       }
     ]
   },
@@ -67,7 +67,7 @@ export const about = {
 
   calendar: {
     display: false,
-    link: "" // No calendar link, can be added later
+    link: ""
   },
 
   tableOfContent: {
@@ -116,3 +116,19 @@ export const languages = [
   { name: "English", level: "Advanced (C1)" },
   { name: "French", level: "Elementary (A2)" }
 ] as const;
+
+export const person = {
+  name: "Ashish Kumar Singh",
+  role: "Freelancer | Tech Enthusiast | Educational Leader",
+  avatar: "/avatar.jpg", // Replace with your actual avatar path in public/ folder
+  location: "New Delhi, India",
+  languages: ["Hindi (C1)", "English (C1)", "French (A2)"]
+} as const;
+
+export const social = [
+  {
+    name: "GitHub",
+    link: "https://github.com/ashish01-dev",
+    icon: "github"
+  },
+  {
