@@ -1,11 +1,3 @@
-export const about = {
-  title: "About Me",
-  description: `Dynamic educational leader with a proven track record as Principal of School,
-  enhancing team skills and ensuring regulatory compliance. Adept at managing projects and
-  addressing challenges collaboratively. Passionate about solving issues and viewing challenges
-  as real-life opportunities.`,
-} as const;
-
 export const education = [
   {
     degree: "Bachelor of Technology in Information Technology",
