@@ -7,4 +7,9 @@ export const siteConfig = {
     email: "ashish.jayshreeran@gmail.com",
     location: "New Delhi, India"
   },
+  // Theme options: 'light', 'dark', or 'system'
+  theme: "dark",
+
+  // Ensure local content is used instead of CMS
+  cms: false
 } as const;
