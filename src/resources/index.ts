@@ -1,13 +1,25 @@
-// import a pre-defined template for config and content options
+// src/resources/index.ts
+
+// Re-export items from content.ts that actually exist
 export {
   person,
   social,
   home,
   about,
-  blog,
-  work,
-  gallery,
-  // Removed newsletter since it does not exist in content.ts
+  // blog, work, gallery removed since they don't exist in content.ts
 } from "./content";
 
-export { display, mailchimp, routes, protectedRoutes, baseURL, fonts, style, schema, sameAs, effects, dataStyle } from "./once-ui.config";
+// Re-export config and utilities
+export {
+  display,
+  mailchimp,
+  routes,
+  protectedRoutes,
+  baseURL,
+  fonts,
+  style,
+  schema,
+  sameAs,
+  effects,
+  dataStyle,
+} from "./once-ui.config";
