@@ -125,6 +125,7 @@ export const person = {
   role: "Freelancer | Tech Enthusiast | Educational Leader",
   avatar: "/avatar.jpg", // Make sure this exists in public/
   location: "New Delhi, India",
+  email: "ashish.jayshreeran@gmail.com",
   languages: ["Hindi (C1)", "English (C1)", "French (A2)"]
 } as const;
 
